@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "wrangler pages dev public",
-    "build": "tsc"
+    "build": "tsc",
+    "deploy": "wrangler pages deploy public"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
