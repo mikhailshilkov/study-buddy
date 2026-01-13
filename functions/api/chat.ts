@@ -73,6 +73,77 @@ A fraction represents a part of a whole:
 - Adding: Add numerators, keep denominator
 - Subtracting: Subtract numerators, keep denominator
 - Simplifying: Divide both by GCD`,
+
+  "german-kapitel3-muenchen": `# German Kapitel 3 - München (HAVO/VWO Year 1)
+
+## Target: Dutch students learning German
+
+## Lektion 1 - Sports & Activities (German → Dutch)
+- das Alter = de leeftijd (Ab welchem Alter kann man Judo lernen?)
+- aufgeregt = opgewonden (Ich bin ganz aufgeregt!)
+- begeistert = enthousiast (Der Trainer ist begeistert.)
+- der Erfolg = het succes (Was für ein Erfolg!)
+- gefährlich = gevaarlijk (Klettern kann gefährlich sein.)
+- gewinnen = winnen (Wir gewinnen das Spiel.)
+- insgesamt = in totaal (insgesamt zwanzig Punkte)
+- klappen = lukken (Das wird klappen.)
+- die Mannschaft = het team (Die Mannschaft besteht aus zwölf Spielern.)
+- das Mitglied = het lid (Ich bin Mitglied im Eishockeyverein.)
+- der Sieger = de winnaar / die Siegerin = de winnares
+- der See = het meer (im See schwimmen)
+- spazieren gehen = (gaan) wandelen
+- die Sportart = de tak van sport
+- die Stunde = het uur (eine Stunde ohne Pause)
+- teilnehmen = deelnemen (am Turnier teilnehmen)
+- üben = oefenen (den Aufschlag üben)
+- der Wettkampf = de wedstrijd
+- die Wiese = het weiland
+- zusammen = samen (Wir spielen zusammen.)
+- der Zuschauer = de toeschouwer / die Zuschauerin = de toeschouwster
+
+## Lektion 2 - Experiences & Events (German → Dutch)
+- ein bisschen = een beetje (ein bisschen Hunger)
+- der Buchstabe = de letter (der erste Buchstabe)
+- das Erlebnis = de belevenis (Das Oktoberfest ist ein Erlebnis.)
+- fertig = klaar (Das Essen ist fertig.)
+- sich fürchten = bang zijn (sich vor dem Ball fürchten)
+- der Gegner = de tegenstander
+- die Hochzeit = de bruiloft
+- hoffentlich = hopelijk
+- jemals = ooit (Bist du jemals in München gewesen?)
+- der Lärm = het lawaai
+- der Müll = het afval
+- die Nachricht = het bericht(je)
+- das Rennen = de race
+- schon = al (Hast du schon mal...?)
+- tauchen = duiken
+- tauschen = ruilen, wisselen
+- treffen = elkaar zien, ontmoeten
+- verrückt = gek
+- vorsichtig = voorzichtig
+- weil = omdat (weil er das Oktoberfest besuchen will)
+- wieder = weer
+- wiederholen = herhalen
+
+## Die Uhrzeiten (Telling Time)
+"Wie spät ist es?" / "Wie viel Uhr ist es?" = Hoe laat is het?
+
+Analog time:
+- :00 → ... Uhr (Es ist zwei Uhr)
+- :15 → Viertel nach ... (Viertel nach zwei)
+- :30 → halb [NEXT hour] (halb drei = 2:30, NOT 3:30!)
+- :45 → Viertel vor ... (Viertel vor drei)
+- :20 → zwanzig nach ...
+- :25 → fünf vor halb ... (fünf vor halb fünf = 4:25)
+- :35 → fünf nach halb ... (fünf nach halb fünf = 4:35)
+
+Digital (24h): 16:30 = sechzehn Uhr dreißig
+
+## Time Prepositions (im/am/um/von...bis)
+- im + season/month: Im Herbst, Im Mai
+- am + day/date/part of day: Am Montag, Am Morgen, Am 25. Dezember
+- um + specific time: Um acht Uhr
+- von...bis + time span: Von fünf bis sieben`,
 };
 
 function buildSystemPrompt(topicContent: string): string {

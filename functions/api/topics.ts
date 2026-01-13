@@ -17,6 +17,12 @@ const TOPICS = [
     description: "Understanding and working with fractions",
     level: "Elementary (Grades 3-5)",
   },
+  {
+    id: "german-kapitel3-muenchen",
+    name: "German Kapitel 3 - München",
+    description: "Vocabulary, time expressions & prepositions (Dutch → German)",
+    level: "HAVO/VWO Year 1",
+  },
 ];
 
 export const onRequestGet: PagesFunction<Env> = async () => {
