@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Buddy</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Study Buddy</h1>
+      <div class="topic-selector">
+        <label for="topic">Topic:</label>
+        <select id="topic">
+          <option value="">Select a topic...</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="chat-container">
+      <div id="messages" class="messages">
+        <div class="welcome-message">
+          <p>Welcome to Study Buddy!</p>
+          <p>Select a topic above to start learning.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="input-area">
+      <form id="chat-form">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your answer..."
+          autocomplete="off"
+          disabled
+        >
+        <button type="submit" id="send-btn" disabled>Send</button>
+      </form>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
