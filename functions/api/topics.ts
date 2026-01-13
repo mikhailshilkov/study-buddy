@@ -10,18 +10,21 @@ const TOPICS = [
     name: "German Basics",
     description: "Common German words and phrases for everyday situations",
     level: "Beginner (A1)",
+    language: "en",
   },
   {
     id: "math-fractions",
     name: "Math - Fractions",
     description: "Understanding and working with fractions",
     level: "Elementary (Grades 3-5)",
+    language: "en",
   },
   {
     id: "german-kapitel3-muenchen",
-    name: "German Kapitel 3 - München",
-    description: "Vocabulary, time expressions & prepositions (Dutch → German)",
-    level: "HAVO/VWO Year 1",
+    name: "Duits Kapitel 3 - München",
+    description: "Woordenschat, kloktijden & voorzetsels",
+    level: "HAVO/VWO klas 1",
+    language: "nl",
   },
 ];
 

@@ -146,8 +146,26 @@ Digital (24h): 16:30 = sechzehn Uhr dreißig
 - von...bis + time span: Von fünf bis sieben`,
 };
 
-function buildSystemPrompt(topicContent: string): string {
-  return `You are a friendly and encouraging tutor helping a student learn. Your current topic is:
+// Language for tutor instructions (not the content being learned)
+const TOPIC_LANGUAGE: Record<string, string> = {
+  "german-basics": "en",
+  "math-fractions": "en",
+  "german-kapitel3-muenchen": "nl",
+};
+
+const LANGUAGE_INSTRUCTIONS: Record<string, string> = {
+  "en": "Communicate with the student in English.",
+  "nl": "Communiceer met de leerling in het Nederlands. Alle instructies, feedback en uitleg moeten in het Nederlands zijn.",
+};
+
+function buildSystemPrompt(topicContent: string, language: string): string {
+  const langInstruction = LANGUAGE_INSTRUCTIONS[language] || LANGUAGE_INSTRUCTIONS["en"];
+
+  return `You are a friendly and encouraging tutor helping a student learn.
+
+IMPORTANT: ${langInstruction}
+
+Your current topic is:
 
 ${topicContent}
 
@@ -191,6 +209,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       );
     }
 
+    const language = TOPIC_LANGUAGE[topic] || "en";
+
     const response = await fetch("https://api.anthropic.com/v1/messages", {
       method: "POST",
       headers: {
@@ -201,7 +221,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       body: JSON.stringify({
         model: "claude-3-5-haiku-20241022",
         max_tokens: 1024,
-        system: buildSystemPrompt(topicContent),
+        system: buildSystemPrompt(topicContent, language),
         messages: messages.map((m) => ({
           role: m.role,
           content: m.content,
