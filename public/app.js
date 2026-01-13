@@ -18,6 +18,14 @@ async function init() {
   await loadTopics();
   topicSelect.addEventListener("change", handleTopicChange);
   chatForm.addEventListener("submit", handleSubmit);
+
+  // Check URL for topic parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const topicFromUrl = urlParams.get("topic");
+  if (topicFromUrl && topicSelect.querySelector(`option[value="${topicFromUrl}"]`)) {
+    topicSelect.value = topicFromUrl;
+    topicSelect.dispatchEvent(new Event("change"));
+  }
 }
 
 // Load available topics from API
@@ -47,11 +55,18 @@ async function handleTopicChange(e) {
     state.messages = [];
     renderMessages();
     setInputEnabled(false);
+    // Clear URL param
+    history.replaceState(null, "", window.location.pathname);
     return;
   }
 
   state.currentTopic = topicId;
   state.messages = [];
+
+  // Update URL with topic
+  const url = new URL(window.location);
+  url.searchParams.set("topic", topicId);
+  history.replaceState(null, "", url);
 
   // Clear and show loading
   messagesContainer.innerHTML = "";
