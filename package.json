@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "wrangler pages dev public",
     "build": "tsc",
-    "deploy": "wrangler pages deploy public"
+    "deploy": "echo 'Build complete'"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0"
