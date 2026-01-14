@@ -2,11 +2,13 @@
 
 const state = {
   currentTopic: null,
+  currentUser: null,
   messages: [],
   isLoading: false,
 };
 
 // DOM Elements
+const userNameInput = document.getElementById("user-name");
 const topicSelect = document.getElementById("topic");
 const messagesContainer = document.getElementById("messages");
 const chatForm = document.getElementById("chat-form");
@@ -16,15 +18,26 @@ const sendBtn = document.getElementById("send-btn");
 // Initialize app
 async function init() {
   await loadTopics();
+
+  userNameInput.addEventListener("input", handleUserNameChange);
+  userNameInput.addEventListener("change", handleUserNameChange);
   topicSelect.addEventListener("change", handleTopicChange);
   chatForm.addEventListener("submit", handleSubmit);
 
-  // Check URL for topic parameter
+  // Check URL for parameters
   const urlParams = new URLSearchParams(window.location.search);
+  const userFromUrl = urlParams.get("user");
   const topicFromUrl = urlParams.get("topic");
-  if (topicFromUrl && topicSelect.querySelector(`option[value="${topicFromUrl}"]`)) {
+
+  if (userFromUrl) {
+    userNameInput.value = userFromUrl;
+    state.currentUser = userFromUrl;
+    topicSelect.disabled = false;
+  }
+
+  if (topicFromUrl && state.currentUser && topicSelect.querySelector(`option[value="${topicFromUrl}"]`)) {
     topicSelect.value = topicFromUrl;
-    topicSelect.dispatchEvent(new Event("change"));
+    await handleTopicChange({ target: topicSelect });
   }
 }
 
@@ -46,6 +59,31 @@ async function loadTopics() {
   }
 }
 
+// Handle user name change
+function handleUserNameChange(e) {
+  const name = e.target.value.trim();
+  state.currentUser = name || null;
+
+  // Enable/disable topic selector based on whether we have a name
+  topicSelect.disabled = !name;
+
+  if (!name) {
+    // Reset if name is cleared
+    state.currentTopic = null;
+    state.messages = [];
+    topicSelect.value = "";
+    renderMessages();
+    setInputEnabled(false);
+    updateUrl();
+  } else {
+    updateUrl();
+    // If a topic is already selected, reload its history
+    if (state.currentTopic) {
+      loadHistory();
+    }
+  }
+}
+
 // Handle topic selection
 async function handleTopicChange(e) {
   const topicId = e.target.value;
@@ -55,27 +93,69 @@ async function handleTopicChange(e) {
     state.messages = [];
     renderMessages();
     setInputEnabled(false);
-    // Clear URL param
-    history.replaceState(null, "", window.location.pathname);
+    updateUrl();
     return;
   }
 
   state.currentTopic = topicId;
   state.messages = [];
-
-  // Update URL with topic
-  const url = new URL(window.location);
-  url.searchParams.set("topic", topicId);
-  history.replaceState(null, "", url);
+  updateUrl();
 
   // Clear and show loading
   messagesContainer.innerHTML = "";
   setInputEnabled(false);
 
-  // Start conversation with initial message
-  await sendMessage("Hi! Let's start learning.");
+  // Try to load existing history
+  const hasHistory = await loadHistory();
+
+  if (!hasHistory) {
+    // Start new conversation
+    await sendMessage("Hi! Let's start learning.");
+  }
+
   setInputEnabled(true);
   userInput.focus();
+}
+
+// Load conversation history from server
+async function loadHistory() {
+  if (!state.currentUser || !state.currentTopic) return false;
+
+  try {
+    const response = await fetch(
+      `/api/history?user=${encodeURIComponent(state.currentUser)}&topic=${encodeURIComponent(state.currentTopic)}`
+    );
+    const data = await response.json();
+
+    if (data.messages && data.messages.length > 0) {
+      state.messages = data.messages;
+      renderMessages();
+      scrollToBottom();
+      return true;
+    }
+  } catch (error) {
+    console.error("Failed to load history:", error);
+  }
+  return false;
+}
+
+// Update URL with current state
+function updateUrl() {
+  const url = new URL(window.location);
+
+  if (state.currentUser) {
+    url.searchParams.set("user", state.currentUser);
+  } else {
+    url.searchParams.delete("user");
+  }
+
+  if (state.currentTopic) {
+    url.searchParams.set("topic", state.currentTopic);
+  } else {
+    url.searchParams.delete("topic");
+  }
+
+  history.replaceState(null, "", url);
 }
 
 // Handle form submission
@@ -83,7 +163,7 @@ async function handleSubmit(e) {
   e.preventDefault();
 
   const text = userInput.value.trim();
-  if (!text || state.isLoading || !state.currentTopic) return;
+  if (!text || state.isLoading || !state.currentTopic || !state.currentUser) return;
 
   userInput.value = "";
   await sendMessage(text);
@@ -107,6 +187,7 @@ async function sendMessage(text) {
       body: JSON.stringify({
         topic: state.currentTopic,
         messages: state.messages,
+        user: state.currentUser,
       }),
     });
 
@@ -157,7 +238,18 @@ function renderMessages() {
   });
 
   messagesContainer.innerHTML = "";
-  displayMessages.forEach((el) => messagesContainer.appendChild(el));
+
+  if (displayMessages.length === 0 && !state.currentTopic) {
+    messagesContainer.innerHTML = `
+      <div class="welcome-message">
+        <p>Welcome to Study Buddy!</p>
+        <p>Enter your name and select a topic to start learning.</p>
+      </div>
+    `;
+  } else {
+    displayMessages.forEach((el) => messagesContainer.appendChild(el));
+  }
+
   scrollToBottom();
 }
 

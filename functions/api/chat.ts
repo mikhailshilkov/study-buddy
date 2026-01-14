@@ -1,5 +1,6 @@
 interface Env {
   ANTHROPIC_API_KEY: string;
+  CONVERSATIONS: KVNamespace;
 }
 
 interface Message {
@@ -10,6 +11,7 @@ interface Message {
 interface ChatRequest {
   topic: string;
   messages: Message[];
+  user?: string;
 }
 
 interface AnthropicResponse {
@@ -241,6 +243,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     const data: AnthropicResponse = await response.json();
     const assistantMessage =
       data.content[0]?.type === "text" ? data.content[0].text : "";
+
+    // Save conversation to KV if user is specified
+    if (body.user && context.env.CONVERSATIONS) {
+      const key = `${body.user.toLowerCase()}:${topic}`;
+      const updatedMessages = [
+        ...messages,
+        { role: "assistant" as const, content: assistantMessage },
+      ];
+      await context.env.CONVERSATIONS.put(key, JSON.stringify(updatedMessages));
+    }
 
     return new Response(
       JSON.stringify({ message: assistantMessage }),

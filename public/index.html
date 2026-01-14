@@ -10,11 +10,17 @@
   <div class="app">
     <header class="header">
       <h1>Study Buddy</h1>
-      <div class="topic-selector">
-        <label for="topic">Topic:</label>
-        <select id="topic">
-          <option value="">Select a topic...</option>
-        </select>
+      <div class="header-controls">
+        <div class="user-input-group">
+          <label for="user-name">Name:</label>
+          <input type="text" id="user-name" placeholder="Your name" autocomplete="off">
+        </div>
+        <div class="topic-selector">
+          <label for="topic">Topic:</label>
+          <select id="topic" disabled>
+            <option value="">Select a topic...</option>
+          </select>
+        </div>
       </div>
     </header>
 

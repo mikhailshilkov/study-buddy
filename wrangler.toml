@@ -3,5 +3,12 @@ compatibility_date = "2024-12-01"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "public"
 
+# KV namespace for storing conversations
+# Create with: npx wrangler kv:namespace create CONVERSATIONS
+# Then add the ID below for production, or use --local for dev
+[[kv_namespaces]]
+binding = "CONVERSATIONS"
+id = "TO_BE_CREATED"
+
 [vars]
 # ANTHROPIC_API_KEY is set via Cloudflare dashboard or .dev.vars for local dev
