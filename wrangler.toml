@@ -8,7 +8,7 @@ pages_build_output_dir = "public"
 # Then add the ID below for production, or use --local for dev
 [[kv_namespaces]]
 binding = "CONVERSATIONS"
-id = "TO_BE_CREATED"
+id = "dc81235258f34c75a77acaf566166d34"
 
 [vars]
 # ANTHROPIC_API_KEY is set via Cloudflare dashboard or .dev.vars for local dev
