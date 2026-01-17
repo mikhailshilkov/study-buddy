@@ -93,6 +93,100 @@ Question: "Wie spät ist es?" or "Wie viel Uhr ist es?" = Hoe laat is het?
 | **um** | specific time | Um acht Uhr beginnt die Schule. (Om acht uur...) |
 | **von...bis** | time span | Von fünf bis sieben habe ich Training. (Van vijf tot zeven...) |
 
+## Lektion 3 - Seizoenen / Jahreszeiten
+
+| Deutsch | Niederländisch |
+|---------|----------------|
+| der Frühling | de lente |
+| der Sommer | de zomer |
+| der Herbst | de herfst |
+| der Winter | de winter |
+| im Frühling | in de lente |
+| im Sommer | in de zomer |
+| im Herbst | in de herfst |
+| im Winter | in de winter |
+
+## Dagdelen / Tageszeiten
+
+| Deutsch | Niederländisch | Zeitraum |
+|---------|----------------|----------|
+| am Morgen / morgens | 's morgens | 6-9 uur |
+| am Vormittag / vormittags | 's ochtends | 9-12 uur |
+| am Mittag / mittags | 's middags | 12-13 uur |
+| am Nachmittag / nachmittags | 's middags | 13-18 uur |
+| am Abend / abends | 's avonds | 18-24 uur |
+| in der Nacht / nachts | 's nachts | 0-6 uur |
+
+## Sport treiben (Dutch → German)
+
+| Niederländisch | Deutsch | Beispiel |
+|----------------|---------|----------|
+| badmintonnen | Badminton spielen | Im Sommer spielen wir Badminton. |
+| schaatsen | eislaufen | Ich will auf den Grachten eislaufen. |
+| fietsen | Fahrrad fahren | Wir fahren mit dem Fahrrad. |
+| voetballen | Fußball spielen | Viele Jugendliche spielen Fußball. |
+| hockeyen | Hockey spielen | Meine Freunde spielen Hockey. |
+| naar de sportschool gaan | ins Fitnessstudio gehen | Sie gehen ins Fitnessstudio. |
+| hardlopen | joggen | Wir joggen durch den Wald. |
+| judoën | Judo machen | Deine Freunde machen alle Judo. |
+| klimmen | klettern | Wir klettern auf den Berg. |
+| aan atletiek doen | Leichtathletik machen | Ich mache Leichtathletik. |
+| aan scouting doen | Pfadfinder sein | Ich bin seit einem Jahr Pfadfinder. |
+| paardrijden | reiten | Man kann auf einem Pferd reiten. |
+| roeien | rudern | Meine Brüder rudern bis zur Insel. |
+| zwemmen | schwimmen | Im Sommer schwimmen wir im See. |
+| zeilen | segeln | Wir wollen segeln gehen. |
+| schaken | Schach spielen | Wir spielen oft Schach. |
+| skaten | skaten | Im Sommer skaten wir jeden Abend. |
+| skiën | Ski fahren | Ohne Schnee kann man nicht Ski fahren. |
+| dansen | tanzen | Meine Eltern gehen tanzen. |
+| tennissen | Tennis spielen | In Wimbledon spielen sie Tennis. |
+| de wedstrijd | der Wettbewerb / das Spiel | Am Dienstag haben wir einen Wettbewerb. |
+
+## Frequentie / Häufigkeit
+
+| Niederländisch | Deutsch | Beispiel |
+|----------------|---------|----------|
+| drie keer per week | dreimal pro Woche | Wir spielen dreimal pro Woche Handball. |
+| één keer per dag | einmal pro Tag | Ich fahre einmal pro Tag Fahrrad. |
+| dagelijks | täglich | Mein Vater geht täglich mit dem Hund Gassi. |
+| meestal | meistens | Wir gehen meistens in der Kletterhalle klettern. |
+| nooit | nie | Sie geht nie joggen. |
+| vaak | oft | Ich gehe oft schwimmen. |
+| sinds één jaar | seit einem Jahr | Machst du seit einem Jahr Karate? |
+| sinds twee jaar | seit zwei Jahren | Ich tanze seit zwei Jahren HipHop. |
+| twee keer per maand | zweimal pro Monat | Wir gehen zweimal pro Monat wandern. |
+
+## Gespräche über Sport
+
+| Niederländisch | Deutsch |
+|----------------|---------|
+| Doe je veel aan sport? | Machst du viel Sport? |
+| Aan welke sport doe je? | Welchen Sport machst du? |
+| Hoe vind je voetbal? | Wie findest du Fußball? |
+| Ik vind voetbal geweldig/saai | Ich finde Fußball super/langweilig |
+| Hoelang zit je al op volleybal? | Wie lange spielst du schon Volleyball? |
+| Hoe vaak heb je training? | Wie oft hast du Training? |
+| Van wanneer tot wanneer heb je training? | Von wann bis wann hast du Training? |
+| Wanneer heb je een wedstrijd? | Wann hast du ein Spiel? |
+| Wat doe je graag in de zomer? | Was machst du gern im Sommer? |
+| In de zomer zwem ik graag | Im Sommer schwimme ich gern |
+| In de winter schaats ik soms | Im Winter gehe ich manchmal eislaufen |
+
+## Afspraken maken / Verabredungen
+
+| Niederländisch | Deutsch |
+|----------------|---------|
+| Gaan we om vijf uur hardlopen? | Gehen wir um fünf Uhr joggen? |
+| Wanneer heb je tijd? | Wann hast du Zeit? |
+| Ik kan op maandag om half vier | Ich kann am Montag um halb vier |
+| Dat gaat helaas niet, jammer | Das geht leider nicht, schade |
+| Kun jij op vrijdag? | Kannst du am Freitag? |
+| Wacht, ik kijk even in mijn agenda | Warte, ich schaue mal in meinem Kalender nach |
+| Dan heb ik al iets anders gepland | Dann habe ich schon etwas vor |
+| Heb jij vanmiddag tijd? | Hast du heute Nachmittag Zeit? |
+| Natuurlijk! | Na klar! |
+
 ## Exercise Types
 - Translate German words to Dutch
 - Translate Dutch words to German
@@ -100,3 +194,6 @@ Question: "Wie spät ist es?" or "Wie viel Uhr ist es?" = Hoe laat is het?
 - Tell the time in German (analog and digital)
 - Complete sentences with vocabulary
 - Translate full sentences
+- Sports vocabulary: Dutch verb → German expression
+- Frequency expressions
+- Conversation practice about sports and appointments

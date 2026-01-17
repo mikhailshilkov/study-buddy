@@ -145,7 +145,81 @@ Digital (24h): 16:30 = sechzehn Uhr dreißig
 - im + season/month: Im Herbst, Im Mai
 - am + day/date/part of day: Am Montag, Am Morgen, Am 25. Dezember
 - um + specific time: Um acht Uhr
-- von...bis + time span: Von fünf bis sieben`,
+- von...bis + time span: Von fünf bis sieben
+
+## Lektion 3 - Seizoenen / Jahreszeiten
+- der Frühling = de lente (im Frühling = in de lente)
+- der Sommer = de zomer (im Sommer = in de zomer)
+- der Herbst = de herfst (im Herbst = in de herfst)
+- der Winter = de winter (im Winter = in de winter)
+
+## Dagdelen / Tageszeiten
+- am Morgen / morgens = 's morgens (6-9 uur)
+- am Vormittag / vormittags = 's ochtends (9-12 uur)
+- am Mittag / mittags = 's middags (12-13 uur)
+- am Nachmittag / nachmittags = 's middags (13-18 uur)
+- am Abend / abends = 's avonds (18-24 uur)
+- in der Nacht / nachts = 's nachts (0-6 uur)
+
+## Sport treiben (Dutch → German)
+- badmintonnen = Badminton spielen
+- schaatsen = eislaufen / Schlittschuh laufen
+- fietsen = Fahrrad fahren
+- voetballen = Fußball spielen
+- hockeyen = Hockey spielen
+- naar de sportschool gaan = ins Fitnessstudio gehen
+- hardlopen = joggen
+- judoën = Judo machen
+- klimmen = klettern
+- aan atletiek doen = Leichtathletik machen
+- aan scouting doen = Pfadfinder sein
+- paardrijden = reiten
+- roeien = rudern
+- zwemmen = schwimmen
+- zeilen = segeln
+- schaken = Schach spielen
+- skaten = skaten
+- skiën = Ski fahren
+- dansen = tanzen
+- tennissen = Tennis spielen
+- de wedstrijd = der Wettbewerb (competition) / das Spiel (ball sports match)
+
+## Frequentie / Häufigkeit
+- drie keer per week = dreimal pro Woche
+- één keer per dag = einmal pro Tag
+- dagelijks = täglich
+- meestal = meistens
+- nooit = nie
+- vaak = oft
+- sinds één jaar = seit einem Jahr
+- sinds twee jaar = seit zwei Jahren
+- twee keer per maand = zweimal pro Monat
+
+## Gespräche über Sport (Dutch → German)
+- Doe je veel aan sport? = Machst du viel Sport?
+- Aan welke sport doe je? = Welchen Sport machst du?
+- Hoe vind je voetbal? = Wie findest du Fußball?
+- Ik vind voetbal geweldig/saai = Ich finde Fußball super/langweilig
+- Hoelang zit je al op volleybal? = Wie lange spielst du schon Volleyball?
+- Ik zit al drie jaar op volleybal = Ich spiele schon seit drei Jahren Volleyball
+- Hoe vaak heb je training? = Wie oft hast du Training?
+- Ik heb één keer per week training = Ich habe einmal pro Woche Training
+- Van wanneer tot wanneer heb je training? = Von wann bis wann hast du Training?
+- Wanneer heb je een wedstrijd? = Wann hast du ein Spiel?
+- Wat doe je graag in de zomer? = Was machst du gern im Sommer?
+- In de zomer zwem ik graag = Im Sommer schwimme ich gern
+- In de winter schaats ik soms = Im Winter gehe ich manchmal eislaufen
+
+## Afspraken maken / Verabredungen
+- Gaan we om vijf uur hardlopen? = Gehen wir um fünf Uhr joggen?
+- Wanneer heb je tijd? = Wann hast du Zeit?
+- Ik kan op maandag om half vier = Ich kann am Montag um halb vier
+- Dat gaat helaas niet, jammer = Das geht leider nicht, schade
+- Kun jij op vrijdag? = Kannst du am Freitag?
+- Wacht, ik kijk even in mijn agenda = Warte, ich schaue mal in meinem Kalender nach
+- Dan heb ik al iets anders gepland = Dann habe ich schon etwas vor
+- Heb jij vanmiddag tijd? = Hast du heute Nachmittag Zeit?
+- Natuurlijk! = Na klar!`,
 };
 
 // Language for tutor instructions (not the content being learned)
